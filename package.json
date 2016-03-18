@@ -1,0 +1,27 @@
+{
+  "scripts": {
+    "install": "npm run jspm-install && npm run jspm-bundle",
+    "jspm-install": "jspm registry create bower jspm-bower-endpoint -y && jspm install",
+    "jspm-bundle": "node bundle-modules.js",
+    "start": "http-server"
+  },
+  "jspm": {
+    "directories": {
+      "packages": "jspm/jspm_packages"
+    },
+    "dependencies": {
+      "angular": "bower:angular@1.4.9",
+      "jquery": "bower:jquery@2.1.4"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    }
+  },
+  "devDependencies": {
+    "http-server": "^0.9.0",
+    "jspm": "^0.16.30",
+    "jspm-bower-endpoint": "^0.3.2"
+  }
+}
